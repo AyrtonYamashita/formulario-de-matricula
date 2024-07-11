@@ -1,0 +1,47 @@
+:root{
+  /*Font Family variables*/
+  --font-family: "Poppins", sans-serif;
+  --text: 400 1rem/1.5 var(--font-family);
+  --text-sm: 400 0.875rem/1.4 var(--font-family);
+  --heading1: 700 2rem/120% var(--font-family);
+  --heading2: 700 1.5rem/120% var(--font-family);
+  --heading3: 700 1.25rem/120% var(--font-family);
+  --heading4: 700 1rem/120% var(--font-family); 
+
+  /*Brand Colors*/
+  --brand-light: #F67841;
+  --brand-mid: #F3541C;
+  --brand-dark: #E43A12;
+
+  /*Text Colors*/
+  --text-primary: #292524;
+  --text-secondary: #57534E;
+  --text-tertiary: #8F8881;
+  --text-highlight: #E43A12;
+
+  /*Surface*/
+  --surface-primary: #FFFFFF;
+  --surface-secondary: #FEE7D6;
+  --surface-disable: #E7E5E4;
+
+  /*Strokes*/
+  --stroke-default: #D6D3D1;
+  --stroke-highlight: #F3541C;
+
+  /*Semantics*/
+  --semantic-error: #DC2626;
+
+  /*Supporting*/
+  --orange: #F9A474;
+  --yellow: #FEDF6F;
+  --green: #C7D78D;
+  --blue: #B8CEDC;
+  --violet: #C3B2E7;
+  --pink: #F682A5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
