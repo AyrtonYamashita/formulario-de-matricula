@@ -1,16 +1,20 @@
 #app {
   display: grid;
-  grid-template-columns: 51.25% 48.75%;
+  grid-template-rows: 51.25% 48.75%;
+  grid-template-areas:
+    "aside"
+    "main";
   height: 100vh;
-  overflow: hidden;
 }
 
 main {
+  grid-area: main;
+  --pad: 1.5rem;
+  margin-right: auto;
   overflow: auto;
-  padding: 4rem;
+  padding: var(--pad);
   & .main-container {
     max-width: 33rem;
-    margin-left: auto;
   }
 
   & .back {
@@ -26,22 +30,68 @@ main {
 }
 
 aside {
+  grid-area: aside;
+  --padding-head: 1.5rem;
+  --iw-size: 19.5rem;
+  --ih-size: 14.25rem;
+
   background-color: var(--surface-secondary);
-  padding: 4rem;
+  padding: var(--padding-head);
 
   & .aside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 31rem;
 
     & > img {
-      margin-top: 2rem;
+      width: var(--iw-size);
+      height: var(--ih-size);
+    }
+  }
+}
+
+@media (width >= 80rem) {
+  #app {
+    display: grid;
+    grid-template-columns: 51.25% 48.75%;
+    height: 100vh;
+    grid-template-areas:
+      "main aside"
+      "main aside";
+  }
+  aside {
+    grid-area: aside;
+    --padding-head: 4rem;
+    --iw-size: 31rem;
+    --ih-size: 23rem;
+
+    & .desktop-only {
+      display: initial;
+    }
+
+    & h2 {
+      font: 600 2.5rem/1.25 var(--font-family);
+      margin-bottom: 0.5rem;
+      & span {
+        color: var(--text-highlight);
+      }
     }
   }
 
-  & h2 {
-    font: 600 2.5rem/1.25 var(--font-family);
-    margin-bottom: .5rem;
-    & span {
-      color: var(--text-highlight);
+  main {
+    grid-area: main;
+    --pad: 4rem;
+    
+    & .back {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    & h1 {
+      font: var(--heading2);
+      margin-bottom: 4rem;
     }
   }
 }
