@@ -1,10 +1,9 @@
 #app {
   display: grid;
-  grid-template-rows: 51.25% 48.75%;
   grid-template-areas:
     "aside"
     "main";
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 main {
@@ -25,7 +24,7 @@ main {
   }
   & h1 {
     font: var(--heading2);
-    margin-bottom: 4rem;
+    margin-bottom: .5rem;
   }
 }
 
@@ -82,7 +81,7 @@ aside {
   main {
     grid-area: main;
     --pad: 4rem;
-    
+    margin-left: auto;
     & .back {
       display: flex;
       align-items: center;

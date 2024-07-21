@@ -1,16 +1,15 @@
 @import url(./fields/index.css);
 form {
   margin-top: 3rem;
-
 }
 
-fieldset{
+fieldset {
   border: none;
   display: grid;
   gap: 1.5rem;
 }
 
-legend{
+legend {
   font: 600 1rem/1.25 var(--font-family);
   margin-bottom: 1.5rem;
 }
@@ -22,5 +21,15 @@ fieldset + fieldset {
 .actions-wrapper {
   margin-top: 3rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+@media (width >= 80rem) {
+  .actions-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
 }
